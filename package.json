@@ -4,11 +4,11 @@
   "scripts": {
     "server": "node server.js",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
+    "export": "next export",
     "start": "next start",
     "build:base-css": "tailwindcss build ./styles/tailwind.base.css -o ./styles/base.css",
-    "format": "prettier --write \"**/*.{js,scss,css,html,json,md,less,tsx}\"",
-    "export": "next export"
+    "format": "prettier --write \"**/*.{js,scss,css,html,json,md,less,tsx}\""
   },
   "dependencies": {
     "@emotion/css": "^11.0.0-next.12",
