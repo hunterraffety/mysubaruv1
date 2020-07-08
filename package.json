@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "build:base-css": "tailwindcss build ./styles/tailwind.base.css -o ./styles/base.css",
-    "format": "prettier --write \"**/*.{js,scss,css,html,json,md,less,tsx}\""
+    "format": "prettier --write \"**/*.{js,scss,css,html,json,md,less,tsx}\"",
+    "export": "next export"
   },
   "dependencies": {
     "@emotion/css": "^11.0.0-next.12",
