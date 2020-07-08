@@ -4,7 +4,6 @@ import { withRouter } from 'next/router'
 import axios from 'axios'
 
 const Post = props => {
-  console.log(props)
   const { post } = props
   return (
     <div>

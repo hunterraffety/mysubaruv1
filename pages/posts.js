@@ -12,7 +12,7 @@ const PostsContainer = styled('div')`
   width: 100%;
 `
 
-const Blog = props => {
+const Posts = props => {
   const { posts } = props
   return (
     <div className={css(tw`grid justify-center items-center h-screen`)}>
@@ -20,11 +20,8 @@ const Blog = props => {
         return (
           <PostsContainer css={tw('justify-center')} key={post.id}>
             <h1 style={{ fontSize: '3rem' }}>{post.id}</h1>
-            <Link route={`/something/${post.id}`}>
-              <a>{post.title}</a>
-            </Link>
             <Link route={`/post/${post.id}`}>
-              <a>{post.title} to /post/</a>
+              <a>{post.title}</a>
             </Link>
             <p>{post.content}</p>
           </PostsContainer>
@@ -34,7 +31,7 @@ const Blog = props => {
   )
 }
 
-Blog.getInitialProps = async ctx => {
+Posts.getInitialProps = async ctx => {
   const res = await axios
     .get('https://jsonplaceholder.typicode.com/posts')
     .then(res => res)
@@ -45,4 +42,4 @@ Blog.getInitialProps = async ctx => {
   }
 }
 
-export default Blog
+export default Posts
