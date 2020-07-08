@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
-import Link from "next/link";
-import styled from "@emotion/styled";
+import Link from 'next/link'
+import styled from '@emotion/styled'
 
-const HeaderContainer = styled("div")`
+const HeaderContainer = styled('div')`
   display: flex;
   width: 100%;
   background-color: #c3c3c3;
@@ -12,7 +12,7 @@ const HeaderContainer = styled("div")`
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-`;
+`
 
 const Header = () => {
   return (
@@ -37,7 +37,7 @@ const Header = () => {
         }
       `}</style>
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

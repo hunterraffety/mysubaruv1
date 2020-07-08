@@ -1,3 +1,5 @@
-const routes = require("next-routes");
+const routes = require('next-routes')
 
-module.exports = routes().add("post", "/post/:id");
+module.exports = routes()
+  // .add('something', '/something/:id')
+  .add('post', '/post/:id')

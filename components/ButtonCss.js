@@ -13,8 +13,8 @@
     "@emotion/styled"
 */
 
-import { css, cx } from "@emotion/css";
-import tw from "@tailwindcssinjs/macro";
+import { css, cx } from '@emotion/css'
+import tw from '@tailwindcssinjs/macro'
 
 //"react native style"
 const styles = {
@@ -33,10 +33,10 @@ const styles = {
     active:bg-gray-700
     transition duration-150 ease-in-out
   `),
-};
+}
 
 const ButtonCss = ({ className, children, ...props }) => (
-  <button {...props} className={cx(styles.button, "group", className)}>
+  <button {...props} className={cx(styles.button, 'group', className)}>
     {/* inline style */}
     <span className={css(tw`absolute left-0 inset-y-0 flex items-center pl-3`)}>
       <svg
@@ -55,6 +55,6 @@ const ButtonCss = ({ className, children, ...props }) => (
     </span>
     {children}
   </button>
-);
+)
 
-export default ButtonCss;
+export default ButtonCss
