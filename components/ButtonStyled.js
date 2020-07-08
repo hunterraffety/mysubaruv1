@@ -11,8 +11,8 @@
     "@emotion/server"
 */
 
-import styled from '@emotion/styled'
-import tw from '@tailwindcssinjs/macro'
+import styled from "@emotion/styled";
+import tw from "@tailwindcssinjs/macro";
 
 const Button = styled.button(tw`
   relative
@@ -28,23 +28,23 @@ const Button = styled.button(tw`
   focus[outline-none border-indigo-700 shadow-outline-indigo]
   active:bg-indigo-700
   transition duration-150 ease-in-out
-`)
+`);
 
 const IconWrapper = styled.span(tw`
   absolute left-0 inset-y-0
   flex items-center
   pl-3
-`)
+`);
 
 const Icon = styled.svg(tw`
   h-5 w-5
   text-indigo-500
   group-hover:text-indigo-400
   transition ease-in-out duration-150
-`)
+`);
 
 const ButtonStyled = ({ className, children, ...props }) => (
-  <Button {...props} className={['group', className].join(' ')}>
+  <Button {...props} className={["group", className].join(" ")}>
     <IconWrapper>
       <Icon fill="currentColor" viewBox="0 0 20 20">
         <path
@@ -56,6 +56,6 @@ const ButtonStyled = ({ className, children, ...props }) => (
     </IconWrapper>
     {children}
   </Button>
-)
+);
 
-export default ButtonStyled
+export default ButtonStyled;
