@@ -1,6 +1,6 @@
 import React from 'react'
 
-import BasePage from '../components/layouts/BasePage'
+import BasePage from '@/components/layouts/BasePage'
 
 const About = () => {
   return (
@@ -36,7 +36,7 @@ const About = () => {
           application.
         </p>
         <p>
-          if you're interested in some of the tools and technologies that I used
+          if you're interested in some of the tools and technologies that I use
           to build this site, I will have a section dedicated to that.
         </p>
       </p>

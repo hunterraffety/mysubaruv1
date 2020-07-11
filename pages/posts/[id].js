@@ -3,7 +3,7 @@ import React from 'react'
 import { withRouter } from 'next/router'
 import axios from 'axios'
 
-import BasePage from '../../components/layouts/BasePage'
+import BasePage from '@/components/layouts/BasePage'
 
 const Post = ({ post }) => {
   return (

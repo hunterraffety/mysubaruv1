@@ -1,5 +1,5 @@
 import React from 'react'
-import BasePage from '../components/layouts/BasePage'
+import BasePage from '@/components/layouts/BasePage'
 
 const Galleries = () => {
   return (

@@ -7,7 +7,7 @@ import { css } from '@emotion/css'
 import styled from '@emotion/styled'
 import tw from '@tailwindcssinjs/macro'
 
-import BasePage from '../../components/layouts/BasePage'
+import BasePage from '@/components/layouts/BasePage'
 
 const Posts = ({ posts }) => {
   return (

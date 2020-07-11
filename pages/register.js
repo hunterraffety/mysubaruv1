@@ -3,7 +3,7 @@ import React from 'react'
 import { css } from '@emotion/css'
 import tw from '@tailwindcssinjs/macro'
 
-import RegisterForm from '../components/auth/RegisterForm'
+import RegisterForm from '@/components/auth/RegisterForm'
 
 const Register = () => {
   return (

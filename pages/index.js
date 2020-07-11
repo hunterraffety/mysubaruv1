@@ -6,7 +6,7 @@ import tw from '@tailwindcssinjs/macro'
 import Typed from 'react-typed'
 
 import { Container } from 'reactstrap'
-import BasePage from '../components/layouts/BasePage'
+import BasePage from '@/components/layouts/BasePage'
 
 const Index = () => {
   return (
