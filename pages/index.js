@@ -6,10 +6,11 @@ import tw from '@tailwindcssinjs/macro'
 import Typed from 'react-typed'
 
 import { Container } from 'reactstrap'
-const Index = props => {
-  const { appProps } = props
+import BasePage from '../components/layouts/BasePage'
+
+const Index = () => {
   return (
-    <div className="mainContentContainer">
+    <BasePage type="home">
       <Typed
         strings={[
           'hi. this is mysubaru.org.',
@@ -21,7 +22,7 @@ const Index = props => {
         backSpeed={30}
         className="typed"
       />
-    </div>
+    </BasePage>
   )
 }
 

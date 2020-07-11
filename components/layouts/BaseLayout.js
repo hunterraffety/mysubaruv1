@@ -4,20 +4,13 @@ import { css } from '@emotion/css'
 
 import Footer from '../shared/Footer'
 import Header from '../shared/Header'
+import BasePage from './BasePage'
 
 const BaseLayout = ({ children }) => {
   return (
-    <div
-      className={css`
-        width: 100%;
-        min-height: 100vh;
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-      `}
-    >
+    <div className="appContainer">
       <Header />
-      <div className="contentContainer">{children}</div>
+      <BasePage type="main">{children}</BasePage>
       <Footer />
     </div>
   )

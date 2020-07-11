@@ -1,17 +1,21 @@
-.mainContentContainer {
-  width: 100%;
+.appContainer {
   height: 100%;
+  width: 100%;
+}
+
+.homeContainer {
+  width: 100%;
+  min-height: 80vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 3.2rem;
   .typed {
     font-size: 6rem;
   }
 }
 
-.baseContainer {
-  width: 50%;
-  padding: 3rem;
-  font-size: 3.2rem;
+.mainContainer {
+  display: flex;
+  justify-content: center;
 }

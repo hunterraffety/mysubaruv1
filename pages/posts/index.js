@@ -1,31 +1,21 @@
 import React from 'react'
 
+import axios from 'axios'
+import Link from 'next/link'
+
 import { css } from '@emotion/css'
 import styled from '@emotion/styled'
 import tw from '@tailwindcssinjs/macro'
 
-import axios from 'axios'
-// import Link from "next/link";
-import { Link } from '../routes'
-import BasePage from '../components/layouts/BasePage'
+import BasePage from '../../components/layouts/BasePage'
 
-const PostsContainer = styled('div')`
-  width: 100%;
-`
-
-const Posts = props => {
-  const { posts } = props
-  console.log(posts)
+const Posts = ({ posts }) => {
   return (
     <BasePage type="blogs">
       {posts.map(post => {
         return (
-          <PostsContainer
-            className="singlePostContainer"
-            css={tw('justify-center')}
-            key={post.id}
-          >
-            <Link route={`/post/${post.id}`}>
+          <div className="postsContainer" key={post.id}>
+            <Link as={`./posts/${post.id}`} href="/posts/[id]">
               <a
                 className={css`
                   text-decoration: underline;
@@ -35,7 +25,7 @@ const Posts = props => {
               </a>
             </Link>
             <p>{post.body}...</p>
-          </PostsContainer>
+          </div>
         )
       })}
     </BasePage>

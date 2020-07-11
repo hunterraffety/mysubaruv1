@@ -3,13 +3,14 @@ import React from 'react'
 import { withRouter } from 'next/router'
 import axios from 'axios'
 
-const Post = props => {
-  const { post } = props
+import BasePage from '../../components/layouts/BasePage'
+
+const Post = ({ post }) => {
   return (
-    <div className="postContainer">
+    <BasePage type="singlePost">
       <p>{post.title}</p>
       <p>{post.body}</p>
-    </div>
+    </BasePage>
   )
 }
 

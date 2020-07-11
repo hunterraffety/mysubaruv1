@@ -1,23 +1,22 @@
 .blogsContainer {
-  width: 50%;
-
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
   padding: 3rem;
   font-size: 3.2rem;
+  .postsContainer {
+    p:last-child {
+      font-family: 'Monsterrat';
+    }
+  }
 }
 
 .singlePostContainer {
   font-size: 3.2rem;
   padding: 3rem;
-  width: 50%;
-  p:last-child {
-    font-family: 'Monsterrat';
-  }
-}
-
-.postContainer {
-  font-size: 3.2rem;
-  padding: 3rem;
-  width: 50%;
+  width: 80%;
+  min-height: 80vh;
   p:last-child {
     font-family: 'Monsterrat';
   }
