@@ -2,11 +2,10 @@
   "name": "with-tailwindcss-emotion",
   "version": "1.0.0",
   "scripts": {
-    "server": "nodemon server.js",
-    "dev": "next dev",
+    "dev": "node server.js",
     "export": "npm run build && next export",
     "build": "next build && next export",
-    "start": "next start",
+    "start": "NODE_ENV=production nodemon server.js",
     "build:base-css": "tailwindcss build ./styles/tailwind.base.css -o ./styles/base.css",
     "format": "prettier --write \"**/*.{js,scss,css,html,json,md,less,tsx}\""
   },

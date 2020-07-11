@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import axios from 'axios'
 import Link from 'next/link'
@@ -9,38 +9,31 @@ import tw from '@tailwindcssinjs/macro'
 
 import BasePage from '@/components/layouts/BasePage'
 
-const Posts = ({ posts }) => {
+import { useGetPosts } from '../../hooks/useGetPosts'
+
+const Posts = () => {
+  const { posts } = useGetPosts()
   return (
     <BasePage type="blogs">
-      {posts.map(post => {
-        return (
-          <div className="postsContainer" key={post.id}>
-            <Link as={`./posts/${post.id}`} href="/posts/[id]">
-              <a
-                className={css`
-                  text-decoration: underline;
-                `}
-              >
-                {post.title}
-              </a>
-            </Link>
-            <p>{post.body}...</p>
-          </div>
-        )
-      })}
+      {posts &&
+        posts.map(post => {
+          return (
+            <div className="postsContainer" key={post.id}>
+              <Link as={`/posts/${post.id}`} href="/posts/[id]">
+                <a
+                  className={css`
+                    text-decoration: underline;
+                  `}
+                >
+                  {post.title}
+                </a>
+              </Link>
+              <p>{post.body}...</p>
+            </div>
+          )
+        })}
     </BasePage>
   )
-}
-
-Posts.getInitialProps = async ctx => {
-  const res = await axios
-    .get('https://jsonplaceholder.typicode.com/posts')
-    .then(res => res)
-    .catch()
-  const posts = res.data.slice(0, 10)
-  return {
-    posts,
-  }
 }
 
 export default Posts

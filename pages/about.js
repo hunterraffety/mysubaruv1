@@ -7,9 +7,9 @@ const About = () => {
     <BasePage type="about">
       <h1>hello.</h1>
       <p>
-        my name is hunter. i drive a dark grey 2015 subaru wrx premium edition.
-        i really like my car, i love driving and working on it, and i also
-        really love to build web apps.
+        my name is hunter. i drive a dark grey metallic 2015 subaru wrx premium
+        edition. i really like my car, i love driving and working on it, and i
+        also really love to build web apps.
       </p>
       <p>
         i'm currently working on building this app with the goal of it being a

@@ -15,6 +15,7 @@ const Post = ({ post }) => {
 }
 
 Post.getInitialProps = async ({ query }) => {
+  let posts
   const res = await axios
     .get(`https://jsonplaceholder.typicode.com/posts/${query.id}`)
     .then(res => res)
