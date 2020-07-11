@@ -3,7 +3,18 @@
   background-color: #cecece;
   min-height: 15rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   font-size: 3.2rem;
   align-items: center;
+  .miscLinks {
+    //
+  }
+  .siteLinks {
+    display: flex;
+    cursor: pointer;
+    h1 {
+      margin: 1rem;
+    }
+  }
 }
