@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { css } from '@emotion/css'
+
+import Footer from '../shared/Footer'
 import Header from '../shared/Header'
 
 const BaseLayout = ({ children }) => {
@@ -8,10 +10,15 @@ const BaseLayout = ({ children }) => {
     <div
       className={css`
         width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
       `}
     >
       <Header />
-      {children}
+      <div className="contentContainer">{children}</div>
+      <Footer />
     </div>
   )
 }

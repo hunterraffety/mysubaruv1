@@ -15,7 +15,7 @@ const PostsContainer = styled('div')`
 const Posts = props => {
   const { posts } = props
   return (
-    <div className={css(tw`grid justify-center items-center h-screen`)}>
+    <div className="blogsContainer">
       {posts.map(post => {
         return (
           <PostsContainer css={tw('justify-center')} key={post.id}>

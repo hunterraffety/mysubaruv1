@@ -1,0 +1,12 @@
+.mainContentContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.2rem;
+  .typed {
+    font-size: 6rem;
+    padding-bottom: 30rem;
+  }
+}
