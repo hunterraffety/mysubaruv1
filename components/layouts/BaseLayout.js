@@ -1,19 +1,18 @@
 import React from 'react'
+
+import { css } from '@emotion/css'
 import Header from '../shared/Header'
-import styled from '@emotion/styled'
 
-const ContentContainer = styled('div')`
-  width: 100vw;
-  height: 100vh;
-  font-size: 1.6rem;
-`
-
-const BaseLayout = ({ children, ...props }) => {
+const BaseLayout = ({ children }) => {
   return (
-    <ContentContainer>
+    <div
+      className={css`
+        width: 100%;
+      `}
+    >
       <Header />
       {children}
-    </ContentContainer>
+    </div>
   )
 }
 

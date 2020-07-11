@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Merriweather&family=Merriweather+Sans&family=Nunito&family=Nunito+Sans&family=Quattrocento&family=Quattrocento+Sans&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Amatic+SC&family=Lato&family=Merriweather&family=Merriweather+Sans&family=Nunito&family=Nunito+Sans&family=Quattrocento&family=Quattrocento+Sans&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&display=swap');
 
 html {
   font-size: 62.5%;
-  font-family: 'Montserrat' 'Helvetica' !important;
+}
+body {
+  background: linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%);
+  font-family: 'Amatic SC', cursive !important;
 }
 
-h1 {
-  font-size: 3.2rem;
-}
+@import './sass/header';
+@import './sass/registration';
