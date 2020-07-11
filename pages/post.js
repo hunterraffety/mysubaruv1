@@ -6,13 +6,8 @@ import axios from 'axios'
 const Post = props => {
   const { post } = props
   return (
-    <div>
-      <h1>
-        <span style={{ color: 'red' }}>ID:</span> {post.id}
-      </h1>
-      <h2 style={{ color: 'red' }}>Post Title:</h2>
+    <div className="postContainer">
       <p>{post.title}</p>
-      <h2 style={{ color: 'red' }}>Post Body:</h2>
       <p>{post.body}</p>
     </div>
   )

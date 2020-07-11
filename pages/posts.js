@@ -7,6 +7,7 @@ import tw from '@tailwindcssinjs/macro'
 import axios from 'axios'
 // import Link from "next/link";
 import { Link } from '../routes'
+import BasePage from '../components/layouts/BasePage'
 
 const PostsContainer = styled('div')`
   width: 100%;
@@ -14,20 +15,30 @@ const PostsContainer = styled('div')`
 
 const Posts = props => {
   const { posts } = props
+  console.log(posts)
   return (
-    <div className="blogsContainer">
+    <BasePage type="blogs">
       {posts.map(post => {
         return (
-          <PostsContainer css={tw('justify-center')} key={post.id}>
-            <h1 style={{ fontSize: '3rem' }}>{post.id}</h1>
+          <PostsContainer
+            className="singlePostContainer"
+            css={tw('justify-center')}
+            key={post.id}
+          >
             <Link route={`/post/${post.id}`}>
-              <a>{post.title}</a>
+              <a
+                className={css`
+                  text-decoration: underline;
+                `}
+              >
+                {post.title}
+              </a>
             </Link>
-            <p>{post.content}</p>
+            <p>{post.body}...</p>
           </PostsContainer>
         )
       })}
-    </div>
+    </BasePage>
   )
 }
 

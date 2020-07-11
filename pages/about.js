@@ -1,10 +1,11 @@
 import React from 'react'
+import BasePage from '../components/layouts/BasePage'
 
 const About = () => {
   return (
-    <div>
+    <BasePage type="about">
       <h1>About</h1>
-    </div>
+    </BasePage>
   )
 }
 

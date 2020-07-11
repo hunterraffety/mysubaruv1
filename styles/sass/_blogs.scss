@@ -1,4 +1,24 @@
 .blogsContainer {
-  width: 80%;
-  border: 1px solid red;
+  width: 50%;
+
+  padding: 3rem;
+  font-size: 3.2rem;
+}
+
+.singlePostContainer {
+  font-size: 3.2rem;
+  padding: 3rem;
+  width: 50%;
+  p:last-child {
+    font-family: 'Monsterrat';
+  }
+}
+
+.postContainer {
+  font-size: 3.2rem;
+  padding: 3rem;
+  width: 50%;
+  p:last-child {
+    font-family: 'Monsterrat';
+  }
 }

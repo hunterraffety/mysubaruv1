@@ -13,11 +13,12 @@ const Index = props => {
       <Typed
         strings={[
           'hi. this is mysubaru.org.',
-          "it's a place to share your subaru with others.",
-          'launching summer 2020. promise.',
+          "it's a place to share your subaru.",
+          "launching summer 2020. i'm working hard.",
         ]}
-        typeSpeed={60}
-        backSpeed={80}
+        backDelay={1200}
+        typeSpeed={45}
+        backSpeed={30}
         className="typed"
       />
     </div>
