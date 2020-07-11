@@ -2,7 +2,7 @@
   "name": "with-tailwindcss-emotion",
   "version": "1.0.0",
   "scripts": {
-    "server": "node server.js",
+    "server": "nodemon server.js",
     "dev": "next dev",
     "build": "next build && next export",
     "export": "next export",

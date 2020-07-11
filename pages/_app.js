@@ -5,7 +5,6 @@ import '../styles/base.css'
 import '../styles/index.scss'
 
 import BaseLayout from '../components/layouts/BaseLayout'
-import Head from 'next/head'
 
 export default class App extends Component {
   static async getInitialProps({ Component, ctx }) {
