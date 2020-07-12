@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "node server.js",
     "export": "npm run build && next export",
-    "build": "next build && next export",
+    "build": "next build",
+    "postbuild": "next-on-netlify",
     "start": "NODE_ENV=production nodemon server.js",
     "build:base-css": "tailwindcss build ./styles/tailwind.base.css -o ./styles/base.css",
     "format": "prettier --write \"**/*.{js,scss,css,html,json,md,less,tsx}\""
@@ -19,6 +20,7 @@
     "express": "^4.17.1",
     "global": "^4.4.0",
     "next": "latest",
+    "next-on-netlify": "^2.3.0",
     "next-routes": "^1.4.2",
     "prettier": "^2.0.5",
     "react": "16.13.1",
