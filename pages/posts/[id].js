@@ -6,13 +6,11 @@ import axios from 'axios'
 import BasePage from '@/components/layouts/BasePage'
 import Link from 'next/link'
 
-import { useGetData } from '../../hooks/useGetData'
+import { useGetPostById } from '../../hooks/useGetData'
 
 const Post = ({ post }) => {
   const router = useRouter()
-  const { data, error, loading } = useGetData(
-    router.query.id ? `/api/v1/posts/${router.query.id}` : null
-  )
+  const { data, error, loading } = useGetPostById(router.query.id)
 
   return (
     <BasePage type="singlePost">
