@@ -22,7 +22,7 @@ Post.getInitialProps = async ({ query }) => {
     const res = await axios.get(
       `https://jsonplaceholder.typicode.com/posts/${query.id}`
     )
-    posts = res.data
+    post = res.data
   } catch (e) {
     console.error(e)
   }
