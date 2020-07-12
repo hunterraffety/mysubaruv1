@@ -10,7 +10,7 @@ import BasePage from '@/components/layouts/BasePage'
 import { useGetData } from '../../hooks/useGetData'
 
 const Posts = () => {
-  const { data, error, loading } = useGetData()
+  const { data, error, loading } = useGetData('/api/v1/posts')
 
   return (
     <BasePage type="blogs">
