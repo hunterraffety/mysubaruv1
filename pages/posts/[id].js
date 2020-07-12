@@ -16,16 +16,18 @@ const Post = ({ post }) => {
   )
 }
 
-Post.getInitialProps = async ctx => {
-  let posts = {}
-  const res = await axios
-    .get(`https://jsonplaceholder.typicode.com/posts/${ctx.query.id}`)
-    .then(res => res)
-    .catch()
-  const post = res.data
-  return {
-    post,
+Post.getInitialProps = async ({ query }) => {
+  let post = {}
+  try {
+    const res = await axios.get(
+      `https://jsonplaceholder.typicode.com/posts/${query.id}`
+    )
+    posts = res.data
+  } catch (e) {
+    console.error(e)
   }
+
+  return { post: post }
 }
 
 export default withRouter(Post)
