@@ -12,7 +12,7 @@ import BasePage from '@/components/layouts/BasePage'
 import { useGetPosts } from '../../hooks/useGetPosts'
 
 const Posts = () => {
-  const { posts } = useGetPosts()
+  const { posts, error } = useGetPosts()
   return (
     <BasePage type="blogs">
       {posts &&
@@ -29,6 +29,7 @@ const Posts = () => {
                 </a>
               </Link>
               <p>{post.body}...</p>
+              {error && <div>{error.message}</div>}
             </div>
           )
         })}
