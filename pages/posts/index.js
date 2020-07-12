@@ -7,10 +7,10 @@ import tw from '@tailwindcssinjs/macro'
 
 import BasePage from '@/components/layouts/BasePage'
 
-import { useGetPosts } from '../../hooks/useGetPosts'
+import { useGetData } from '../../hooks/useGetData'
 
 const Posts = () => {
-  const { posts, error, loading } = useGetPosts()
+  const { data, error, loading } = useGetData()
 
   return (
     <BasePage type="blogs">
@@ -24,8 +24,8 @@ const Posts = () => {
           Loading...
         </h3>
       ) : null}
-      {posts &&
-        posts.map(post => {
+      {data &&
+        data.map(post => {
           return (
             <div className="postsContainer" key={post.id}>
               <Link as={`/posts/${post.id}`} href="/posts/[id]">
