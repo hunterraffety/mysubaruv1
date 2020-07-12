@@ -1,8 +1,10 @@
 import React from 'react'
 
 import Link from 'next/link'
+import Button from '../../Button'
 
-const HeaderNav = () => {
+const HeaderNav = props => {
+  const { loading, user } = props
   return (
     <div className="headerNavContainer">
       <Link href="/posts">
@@ -14,9 +16,12 @@ const HeaderNav = () => {
       <Link href="/about">
         <a className="navLink">About</a>
       </Link>
-      <a className="navLink" href="/api/v1/login">
-        Login
-      </a>
+      {!loading && (
+        <>
+          {user && <Button type="signout" text="Sign Out" />}
+          {!user && <Button type="signin" text="Sign In" />}
+        </>
+      )}
     </div>
   )
 }

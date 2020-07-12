@@ -11,9 +11,7 @@ const Footer = () => {
       <div className="miscLinks">
         <h1>.mysubaru. | 2020</h1>
       </div>
-      <div className="siteLinks">
-        <SignOut />
-      </div>
+      <div className="siteLinks"></div>
     </BasePage>
   )
 }

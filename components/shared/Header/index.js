@@ -3,7 +3,7 @@ import React from 'react'
 import HeaderNav from './HeaderNav'
 import Link from 'next/link'
 
-const Header = props => {
+const Header = ({ user, loading }) => {
   return (
     <div className="headerContainer">
       <div className="headerText">
@@ -11,7 +11,7 @@ const Header = props => {
           <a>.mysubaru.</a>
         </Link>
       </div>
-      <HeaderNav />
+      <HeaderNav user={user} loading={loading} />
     </div>
   )
 }
