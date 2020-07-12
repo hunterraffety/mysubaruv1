@@ -4,12 +4,14 @@ import { withRouter } from 'next/router'
 import axios from 'axios'
 
 import BasePage from '@/components/layouts/BasePage'
+import Link from 'next/link'
 
 const Post = ({ post }) => {
   return (
     <BasePage type="singlePost">
       <p>{post.title}</p>
       <p>{post.body}</p>
+      <Link href="/posts">... back</Link>
     </BasePage>
   )
 }
