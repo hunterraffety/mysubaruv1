@@ -16,10 +16,10 @@ const Post = ({ post }) => {
   )
 }
 
-Post.getInitialProps = async ({ query }) => {
-  let posts
+Post.getInitialProps = async ctx => {
+  let posts = {}
   const res = await axios
-    .get(`https://jsonplaceholder.typicode.com/posts/${query.id}`)
+    .get(`https://jsonplaceholder.typicode.com/posts/${ctx.query.id}`)
     .then(res => res)
     .catch()
   const post = res.data
