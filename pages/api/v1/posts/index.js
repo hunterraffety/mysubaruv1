@@ -6,7 +6,7 @@ export default async (req, res) => {
       'https://jsonplaceholder.typicode.com/posts'
     )
     const posts = axiosRes.data
-    res.status(200).json(posts.slice(0, 10))
+    res.status(200).json(posts.slice(0, 11))
   } catch (e) {
     console.error(e)
     res.status(e.status || 400).json({ message: 'Api error' })

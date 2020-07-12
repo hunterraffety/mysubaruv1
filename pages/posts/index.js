@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react'
-
-import axios from 'axios'
+import React from 'react'
 import Link from 'next/link'
 
 import { css } from '@emotion/css'
@@ -12,9 +10,20 @@ import BasePage from '@/components/layouts/BasePage'
 import { useGetPosts } from '../../hooks/useGetPosts'
 
 const Posts = () => {
-  const { posts, error } = useGetPosts()
+  const { posts, error, loading } = useGetPosts()
+
   return (
     <BasePage type="blogs">
+      {loading ? (
+        <h3
+          className={css`
+            text-align: center;
+            font-size: 6rem;
+          `}
+        >
+          Loading...
+        </h3>
+      ) : null}
       {posts &&
         posts.map(post => {
           return (
@@ -29,10 +38,10 @@ const Posts = () => {
                 </a>
               </Link>
               <p>{post.body}...</p>
-              {error && <div>{error.message}</div>}
             </div>
           )
         })}
+      {error && <div>{error.message}</div>}
     </BasePage>
   )
 }
