@@ -1,7 +1,12 @@
 import React from 'react'
 
-const Button = ({ type, text }) => {
-  return <button className={`${type}-button`}>{text}</button>
+const Button = props => {
+  const { variant, text, handleSubmit } = props
+  return (
+    <button className={`${variant}-button`} onClick={handleSubmit}>
+      {text}
+    </button>
+  )
 }
 
 export default Button

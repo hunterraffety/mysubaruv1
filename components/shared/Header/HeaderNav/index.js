@@ -2,9 +2,12 @@ import React from 'react'
 
 import Link from 'next/link'
 import Button from '../../Button'
+import { useRouter } from 'next/router'
 
 const HeaderNav = props => {
   const { loading, user } = props
+  const router = useRouter()
+
   return (
     <div className="headerNavContainer">
       <Link href="/posts">
@@ -18,8 +21,24 @@ const HeaderNav = props => {
       </Link>
       {!loading && (
         <>
-          {user && <Button type="signout" text="Sign Out" />}
-          {!user && <Button type="signin" text="Sign In" />}
+          {user && (
+            <Button
+              variant="logout"
+              text="Logout"
+              handleSubmit={() => {
+                router.push('/api/v1/logout')
+              }}
+            />
+          )}
+          {!user && (
+            <Button
+              variant="login"
+              text="Login"
+              handleSubmit={() => {
+                router.push('/api/v1/login')
+              }}
+            />
+          )}
         </>
       )}
     </div>
