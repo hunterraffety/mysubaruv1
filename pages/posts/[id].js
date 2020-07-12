@@ -6,7 +6,7 @@ import axios from 'axios'
 import BasePage from '@/components/layouts/BasePage'
 import Link from 'next/link'
 
-import { useGetPostById } from '../../hooks/useGetData'
+import { useGetPostById } from '../../hooks'
 
 const Post = ({ post }) => {
   const router = useRouter()

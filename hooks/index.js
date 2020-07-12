@@ -24,7 +24,7 @@
 
 import useSWR from 'swr'
 
-const fetchFunc = url =>
+const fetcher = url =>
   fetch(url).then(async res => {
     const result = await res.json()
     if (res.status !== 200) {
@@ -34,14 +34,14 @@ const fetchFunc = url =>
   })
 
 export const useGetPosts = () => {
-  const { data, error, ...rest } = useSWR('/api/v1/posts', fetchFunc)
+  const { data, error, ...rest } = useSWR('/api/v1/posts', fetcher)
   return { data, error, loading: !data && !error, ...rest }
 }
 
 export const useGetPostById = id => {
   const { data, error, ...rest } = useSWR(
     id ? `/api/v1/posts/${id}` : null,
-    fetchFunc
+    fetcher
   )
   return { data, error, loading: !data && !error, ...rest }
 }

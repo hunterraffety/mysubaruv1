@@ -7,11 +7,11 @@ import tw from '@tailwindcssinjs/macro'
 
 import BasePage from '@/components/layouts/BasePage'
 
-import { useGetPosts } from '../../hooks/useGetData'
+import { useGetPosts } from '../../hooks'
 
 const Posts = () => {
   const { data, error, loading } = useGetPosts()
-  // const { data, error, loading } = useSWR('/api/v1/posts', fetchFunc)
+  // const { data, error, loading } = useSWR('/api/v1/posts', fetcher)
   return (
     <BasePage type="blogs">
       {loading ? (
