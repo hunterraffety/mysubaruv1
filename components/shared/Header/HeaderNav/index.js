@@ -5,7 +5,7 @@ import Button from '../../Button'
 import { useRouter } from 'next/router'
 
 const HeaderNav = props => {
-  const { loading, user } = props
+  const { error, loading, user } = props
   const router = useRouter()
 
   return (
@@ -18,6 +18,9 @@ const HeaderNav = props => {
       </Link>
       <Link href="/about">
         <a className="navLink">About</a>
+      </Link>
+      <Link href="/authed">
+        <a className="navLink">Authed</a>
       </Link>
       {!loading && (
         <>

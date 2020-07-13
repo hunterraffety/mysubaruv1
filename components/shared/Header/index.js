@@ -3,7 +3,10 @@ import React from 'react'
 import HeaderNav from './HeaderNav'
 import Link from 'next/link'
 
-const Header = ({ user, loading }) => {
+import { useGetUser } from '.,/../../hooks/useGetUser'
+
+const Header = () => {
+  const { data, error, loading } = useGetUser()
   return (
     <div className="headerContainer">
       <div className="headerText">
@@ -11,7 +14,7 @@ const Header = ({ user, loading }) => {
           <a>.mysubaru.</a>
         </Link>
       </div>
-      <HeaderNav user={user} loading={loading} />
+      <HeaderNav user={data} loading={loading} error={error} />
     </div>
   )
 }

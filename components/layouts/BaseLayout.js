@@ -6,13 +6,10 @@ import Footer from '../shared/Footer'
 import Header from '../shared/Header'
 import BasePage from './BasePage'
 
-import { useGetUser } from '../../hooks/useGetUser'
-
 const BaseLayout = ({ children }) => {
-  const { data, error, loading } = useGetUser()
   return (
     <div className="appContainer">
-      <Header user={data} error={error} loading={loading} />
+      <Header />
       <BasePage type="main">{children}</BasePage>
       <Footer />
     </div>
