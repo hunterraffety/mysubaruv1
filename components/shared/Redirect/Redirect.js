@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
-const Redirect = ({ to }) => {
+const Redirect = ({ to, ssr }) => {
   const router = useRouter()
   useEffect(() => {
-    router.push(to)
+    if (ssr) {
+      window.location.pathname = to
+    } else {
+      router.push(to)
+    }
   }, [])
   return null
 }

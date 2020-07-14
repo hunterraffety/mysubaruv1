@@ -28,7 +28,7 @@ const HeaderNav = props => {
             <Button
               variant="logout"
               text="Logout"
-              handleSubmit={() => {
+              handleClick={() => {
                 router.push('/api/v1/logout')
               }}
             />
@@ -37,7 +37,7 @@ const HeaderNav = props => {
             <Button
               variant="login"
               text="Login"
-              handleSubmit={() => {
+              handleClick={() => {
                 router.push('/api/v1/login')
               }}
             />

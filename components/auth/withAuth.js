@@ -19,9 +19,9 @@ const withAuth = Component => props => {
   }
 
   if (!data) {
-    return <Redirect to="/api/v1/login" />
+    return <Redirect ssr to="/api/v1/login" />
   } else {
-    return <Component {...props} />
+    return <Component user={data} loading={loading} {...props} />
   }
 }
 

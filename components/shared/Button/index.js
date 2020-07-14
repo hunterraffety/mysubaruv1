@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Button = props => {
-  const { variant, text, handleSubmit } = props
+  const { variant, text, handleClick } = props
   return (
-    <button className={`${variant}-button`} onClick={handleSubmit}>
+    <button className={`${variant}-button`} onClick={handleClick}>
       {text}
     </button>
   )
