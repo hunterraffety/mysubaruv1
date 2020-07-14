@@ -1,13 +1,13 @@
 import React from 'react'
 
+import { useGetUser } from '../hooks/useGetUser'
+import { useRouter } from 'next/router'
+
 import { css } from '@emotion/css'
 
 import BasePage from '@/components/layouts/BasePage'
-
-import { useGetUser } from '../hooks/useGetUser'
-import { useRouter } from 'next/router'
-import Redirect from '../components/shared/Redirect/Redirect'
-import withAuth from '../components/auth/withAuth'
+import Redirect from '@/components/shared/Redirect/Redirect'
+import withAuth from '@/components/auth/withAuth'
 
 const Authed = ({ user, loading }) => {
   console.log(user, loading)

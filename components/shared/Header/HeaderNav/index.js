@@ -1,8 +1,8 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 
 import Link from 'next/link'
 import Button from '../../Button'
-import { useRouter } from 'next/router'
 
 const HeaderNav = props => {
   const { error, loading, user } = props

@@ -12,3 +12,16 @@ export default initAuth0({
     cookieSecret: process.env.AUTH0_COOKIE_SECRET,
   },
 })
+
+export const authorizeUser = async (req, res) => {
+  const session = await auth0.getSession(req)
+  console.log(session)
+  if (!session || !session.user) {
+    res.writeHead(302, {
+      Location: '/api/v1/login',
+    })
+    res.end()
+    return null
+  }
+  return session.user
+}
