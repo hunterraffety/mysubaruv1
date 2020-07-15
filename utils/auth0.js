@@ -13,6 +13,18 @@ const auth0 = initAuth0({
   },
 })
 
+export const withAuth = () => async ({ req, res }) => {
+  const session = await auth0.getSession(req)
+  if (!session || !session.user) {
+    res.writeHead(302, {
+      Location: '/api/v1/login',
+    })
+    res.end()
+    return { props: {} }
+  }
+  return { props: { user: session.user } }
+}
+
 export const authorizeUser = async (req, res) => {
   const session = await auth0.getSession(req)
   if (!session || !session.user) {
