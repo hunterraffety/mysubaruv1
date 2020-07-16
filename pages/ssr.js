@@ -7,10 +7,12 @@ import auth0, { authorizeUser, withAuth } from '@/utils/auth0'
 import BasePage from '@/components/layouts/BasePage'
 import Redirect from '@/components/shared/Redirect/Redirect'
 
-const Ssr = ({ user }) => {
+const Ssr = ({ user, title }) => {
   return (
     <BasePage type="secret">
-      <h1>SSR {user && user.name}</h1>
+      <h1>
+        SSR {user && user.name} | {title && title}
+      </h1>
     </BasePage>
   )
 }
@@ -25,12 +27,12 @@ const Ssr = ({ user }) => {
 const getTitle = () => {
   return new Promise(resolve => {
     setTimeout(() => {
-      return { title: 'Title' }
+      resolve({ title: 'Gooooooo!' })
     }, 2000)
   })
 }
 
-export const getServerSideProps = withAuth(async () => {
+export const getServerSideProps = withAuth(async ({ req, res }, user) => {
   const title = await getTitle()
   return title
 })
