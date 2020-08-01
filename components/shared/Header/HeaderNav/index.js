@@ -19,6 +19,9 @@ const HeaderNav = props => {
       <Link href="/about">
         <a className="navLink">About</a>
       </Link>
+      <Link href="/ssr">
+        <a className="navLink">Ssr</a>
+      </Link>
       <Link href="/authed">
         <a className="navLink">Authed</a>
       </Link>
