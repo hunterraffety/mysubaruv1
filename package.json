@@ -15,7 +15,7 @@
     "@emotion/css": "^11.0.0-next.12",
     "@emotion/react": "^11.0.0-next.12",
     "@emotion/styled": "^11.0.0-next.12",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
     "cross-env": "^7.0.2",
     "cypress": "^4.10.0",
